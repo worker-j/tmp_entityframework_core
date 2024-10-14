@@ -54,5 +54,13 @@ namespace GetStartedWinform
             this.dataGridViewCategories.Refresh();
             this.dataGridViewProducts.Refresh();
         }
+
+        private void button_code_master1_Click(object sender, EventArgs e)
+        {
+            using (var Form_codeMaster1 = new Form_codeMaster1())
+            {
+                Form_codeMaster1.ShowDialog();
+            }
+        }
     }
 }

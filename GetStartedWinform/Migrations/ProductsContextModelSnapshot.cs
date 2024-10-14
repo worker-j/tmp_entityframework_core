@@ -49,6 +49,40 @@ namespace GetStartedWinform.Migrations
                         });
                 });
 
+            modelBuilder.Entity("GetStartedWinform.Model.DataMaster_cell", b =>
+                {
+                    b.Property<int>("DataMaster_cellId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("DataMaster_cellId"));
+
+                    b.Property<string>("CellLock")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CellMode")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CellType")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Delivery")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ItemCode")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("LotCount")
+                        .HasColumnType("int");
+
+                    b.Property<string>("itemCell")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("DataMaster_cellId");
+
+                    b.ToTable("DataMaster_cells");
+                });
+
             modelBuilder.Entity("GetStartedWinform.Model.Product", b =>
                 {
                     b.Property<int>("ProductId")

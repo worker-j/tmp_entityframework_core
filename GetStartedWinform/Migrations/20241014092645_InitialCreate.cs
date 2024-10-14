@@ -26,6 +26,25 @@ namespace GetStartedWinform.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "DataMaster_cells",
+                columns: table => new
+                {
+                    DataMaster_cellId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    CellMode = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CellType = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CellLock = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Delivery = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ItemCode = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    itemCell = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    LotCount = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_DataMaster_cells", x => x.DataMaster_cellId);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Products",
                 columns: table => new
                 {
@@ -74,6 +93,9 @@ namespace GetStartedWinform.Migrations
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "DataMaster_cells");
+
             migrationBuilder.DropTable(
                 name: "Products");
 

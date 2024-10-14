@@ -38,6 +38,7 @@
             nameDataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
             productsBindingSource = new BindingSource(components);
             buttonSave = new Button();
+            button_code_master1 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridViewCategories).BeginInit();
             ((System.ComponentModel.ISupportInitialize)categoryBindingSource).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridViewProducts).BeginInit();
@@ -50,7 +51,7 @@
             dataGridViewCategories.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCategories.Columns.AddRange(new DataGridViewColumn[] { categoryIdDataGridViewTextBoxColumn, nameDataGridViewTextBoxColumn });
             dataGridViewCategories.DataSource = categoryBindingSource;
-            dataGridViewCategories.Location = new Point(9, 9);
+            dataGridViewCategories.Location = new Point(133, 9);
             dataGridViewCategories.Name = "dataGridViewCategories";
             dataGridViewCategories.Size = new Size(240, 429);
             dataGridViewCategories.TabIndex = 0;
@@ -80,7 +81,7 @@
             dataGridViewProducts.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewProducts.Columns.AddRange(new DataGridViewColumn[] { productIdDataGridViewTextBoxColumn, nameDataGridViewTextBoxColumn1 });
             dataGridViewProducts.DataSource = productsBindingSource;
-            dataGridViewProducts.Location = new Point(265, 9);
+            dataGridViewProducts.Location = new Point(384, 9);
             dataGridViewProducts.Name = "dataGridViewProducts";
             dataGridViewProducts.Size = new Size(240, 429);
             dataGridViewProducts.TabIndex = 1;
@@ -106,19 +107,30 @@
             // 
             // buttonSave
             // 
-            buttonSave.Location = new Point(516, 11);
+            buttonSave.Location = new Point(635, 11);
             buttonSave.Name = "buttonSave";
-            buttonSave.Size = new Size(75, 23);
+            buttonSave.Size = new Size(110, 23);
             buttonSave.TabIndex = 2;
             buttonSave.Text = "Save";
             buttonSave.UseVisualStyleBackColor = true;
             buttonSave.Click += buttonSave_Click;
             // 
+            // button_code_master1
+            // 
+            button_code_master1.Location = new Point(12, 11);
+            button_code_master1.Name = "button_code_master1";
+            button_code_master1.Size = new Size(110, 23);
+            button_code_master1.TabIndex = 3;
+            button_code_master1.Text = "codeMaster1";
+            button_code_master1.UseVisualStyleBackColor = true;
+            button_code_master1.Click += button_code_master1_Click;
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(600, 450);
+            ClientSize = new Size(756, 450);
+            Controls.Add(button_code_master1);
             Controls.Add(buttonSave);
             Controls.Add(dataGridViewProducts);
             Controls.Add(dataGridViewCategories);
@@ -142,5 +154,6 @@
         private DataGridViewTextBoxColumn productIdDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn1;
         private BindingSource productsBindingSource;
+        private Button button_code_master1;
     }
 }
